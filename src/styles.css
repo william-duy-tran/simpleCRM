@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+.color-square {
+    padding: 2px 10px;
+    border: solid 1px #ece9e9;
+}
+.color-square:hover {
+    cursor: pointer;
+    border: solid 2px darkorange ;
+}

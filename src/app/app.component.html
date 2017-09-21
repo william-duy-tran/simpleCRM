@@ -2,7 +2,7 @@
 <h1>{{title}}</h1>
 
 <hero-detail [hero]="selectedHero"></hero-detail>
-
+<product-detail [productInput]="'testing'"></product-detail>
 <h2>My Heroes</h2>
 <ul class="heroes">
     <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">

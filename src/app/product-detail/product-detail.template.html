@@ -1,10 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="container" style="width:30%;margin-left:5px;">
+        <h3>Product Detail {{product.name}}</h3>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                   placeholder="Enter email" [(ngModel)]="product.name">
+        </div>
+        <div class="form-group">
+            <label>Price</label>
+            <input type="text" style="width:30%;" class="form-control" placeholder="price" [(ngModel)]="product.price">
+        </div>
+        <div class="form-group">
+            <label>Size</label>
+            <input type="text" style="width:30%;" class="form-control"placeholder="size" [(ngModel)]="product.size">
+        </div>
+        <div class="form-group">
+            <label>Color: </label>{{product.color}}
+
+            <span *ngFor="let color of productColors" class="color-square"
+                  [style.backgroundColor]="color" (click)="setProductColor(color)">
+            </span>
+        </div>
+        <div class="form-group">
+            <label>Number</label>
+            <input type="text" style="width:30%;" class="form-control" placeholder="number" [(ngModel)]="product.number">
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" [(ngModel)]="product.isKey">
+                is Key
+            </label>
+        </div>
+        <a href="" (click)="getProducts()">Click me</a>
+    {{products}}
+        <button type="button" class="btn btn-primary" (click)="saveProduct()">Save</button>
+</div>
