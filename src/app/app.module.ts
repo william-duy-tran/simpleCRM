@@ -24,6 +24,10 @@ import {AppComponent} from './app.component';
             {
                 path: 'products',
                 component: ProductListComponent
+            },
+            {
+                path:'product/:id',
+                component:ProductDetailComponent
             }
         ])
     ],

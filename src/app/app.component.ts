@@ -7,11 +7,11 @@ import {Component} from '@angular/core';
     selector:"app-root",
     template: `
         <h1>{{title}}</h1>
-        <a routerLink="/products">Heroes</a>
+        <a routerLink="/products">products</a>
         <router-outlet></router-outlet>
     `
 })
 export class AppComponent {
-    title = "Tour of Heroes"
+    title = "Product Management Tool"
 }
 

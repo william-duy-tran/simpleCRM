@@ -1,1 +1,13 @@
-this is product list page
+<div class="container">
+    <div class="row">
+        <div class="col-md-1">Name</div>
+        <div class="col-md-1">Size</div>
+        <div class="col-md-1">color</div>
+    </div>
+    <div class="row" *ngFor="let product of products">
+        <div class="col-md-1"><a routerLink="/product/{{product.id}}">{{product.id}}</a></div>
+        <div class="col-md-1">{{product.name}}</div>
+        <div class="col-md-1">{{product.size}}</div>
+        <div class="col-md-1">{{product.color}}</div>
+    </div>
+</div>
